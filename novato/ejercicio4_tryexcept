@@ -11,3 +11,6 @@ except:
 #AttributeError
 #SyntaxError
 #TypeError
+#KeyboardInterrupt
+#MemoryError
+#OverflowError
