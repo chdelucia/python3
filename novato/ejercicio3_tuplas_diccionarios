@@ -1,0 +1,67 @@
+tup = 1, 2, 3
+a, b, c = tup
+#la tupla tup han sido "desempaquetados" en las variables a, b, y c.
+
+
+my_tuple = (1, 2, True, "una cadena", (3, 4), [5, 6], None)
+
+print(my_tuple[3])
+
+my_list = [1, 2, True, "una cadena", (3, 4), [5, 6], None]
+
+print(my_list[3])
+
+# my_tuple[3] = 0 da eroor porque es imnutable
+my_list[3] = 0
+
+print(my_tuple[3])
+print(my_list[3])
+
+tup = tuple(my_list)
+print(type(tup))
+print(type(my_list))
+len(my_tuple)
+
+for elem in my_tuple:
+    print(elem)
+    
+for elem in my_list:
+    print(elem)
+    
+    
+#un json de to la vida
+dictionary = {
+    "kwiat": "flor",
+    "woda": "agua",
+    "gleba": "tierra"
+    }
+dictionary.update({"gleba": "tierraaa"})
+#pol_esp_dictionary.popitem()
+print(dictionary)
+
+for key, value in dictionary.items():
+    print("Esp ->", key, ":", value)
+
+goodCopy = dictionary.copy()    
+copiar = dictionary
+copiar.update({'a': 'a'})
+print(dictionary)
+print(copiar)
+print(goodCopy)  #como cualquier lenguajee
+
+#convertir en dictionary
+colors = (("green", "#008000"), ("blue", "#0000FF"))
+
+colors_dictionary = dict(colors)
+
+
+colors = {
+    "blanco": (255, 255, 255),
+    "gris": (128, 128, 128),
+    "rojo": (255, 0, 0),
+    "verde": (0, 128, 0)
+    }
+
+#key value
+for col, rgb in colors.items():
+    print(col, ":", rgb)
