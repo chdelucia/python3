@@ -1,0 +1,42 @@
+from typing import Any
+
+
+class Snakes:
+    unavariable = 'test'
+    def __init__(self, poisonous = False): #un constructor de toa la vida y su this.
+        self.___sound = 'Sssssss'  # privado
+        self.poisonous = poisonous # publico
+        
+    def get_sound(self) -> Any:
+        return self.___sound;
+
+
+serpiente = Snakes(True)
+print(serpiente.poisonous)
+print(serpiente.unavariable)
+print(serpiente.get_sound())
+print(serpiente._Snakes___sound) ## aceder a una cosa privadita
+
+print(serpiente.__dict__) ## te lo devuelve todito
+
+
+
+class Primary:
+    variableHeradable = "hola"; # igual que siempre todo atributo y metodo son heredables
+    def __init__(self, name):
+        self.name = name
+
+    def __str__(self):
+        return "My name is " + self.name + "."
+
+
+class Sub(Primary):
+    def __init__(self, name):
+        super().__init__(name)
+        #Primary.__init__(self, name) Hacen lo mismo
+
+
+obj = Sub("Andy")
+
+print(obj)
+print(obj.variableHeradable)
